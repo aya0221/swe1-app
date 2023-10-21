@@ -1,2 +1,4 @@
 [flake8]
+exclude = 
+    myenv/*,
 max-line-length = 88
