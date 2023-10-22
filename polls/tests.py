@@ -18,7 +18,6 @@ def create_question(question_text, days):
 
 
 class SimpleModelTests(TestCase):
-
     def test_was_published_recently_with_old_question(self):
         """
         was_published_recently() should return False for questions whose pub_date
@@ -32,8 +31,7 @@ class SimpleModelTests(TestCase):
         """
         If no questions exist, an appropriate message is displayed.
         """
-        response = self.client.get(reverse('polls:index'))
+        response = self.client.get(reverse("polls:index"))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "No polls are available.")
-        self.assertQuerysetEqual(response.context['latest_question_list'], [])
-
+        self.assertQuerysetEqual(response.context["latest_question_list"], [])
