@@ -1,4 +1,4 @@
 [run]
-source = ebdjango
+source = ebdjango,polls
 omit =
     *migrations*
